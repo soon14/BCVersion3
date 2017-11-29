@@ -33,6 +33,7 @@ import java.util.ArrayList;
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, ViewPager.OnPageChangeListener {
 
+    //底部fragment
     private Fragment[] fragments;
     private HomeFragment homeFragment;
     private UserFragment userFragment;
@@ -65,25 +66,19 @@ public class HomeActivity extends AppCompatActivity
 
     private void initView() {
         toolbar = mBinding.appbarhome.toolbar;
+        toolbar.setTitle("时时彩");
         setSupportActionBar(toolbar);
 
-        vpContent = mBinding.appbarhome.contentHome.vpContent;
-        btnPurchase = mBinding.appbarhome.contentHome.btnPurchase;
-        btnUser = mBinding.appbarhome.contentHome.btnUser;
-        btnService = mBinding.appbarhome.contentHome.btnService;
-//        title = mBinding.titleBar.titlebarTitle;
+        vpContent = mBinding.appbarhome.vpContent;
+        btnPurchase = mBinding.appbarhome.btnPurchase;
+        btnUser = mBinding.appbarhome.btnUser;
+        btnService = mBinding.appbarhome.btnService;
 
         mTabs = new Button[3];
         mTabs[0] = (Button) findViewById(R.id.btn_purchase);
         mTabs[1] = (Button) findViewById(R.id.btn_service);
         mTabs[2] = (Button) findViewById(R.id.btn_user);
-        // select first tab
         mTabs[0].setSelected(true);
-
-//        title.setText(R.string.fragment_purchase_title);
-
-//        SPUtils.putBoolean(Constants.IS_LOGIN, true);
-//        SPUtils.putBoolean(Constants.IS_SPLASH, true);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -93,9 +88,9 @@ public class HomeActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
     }
 
+    //6.0需要动态权限
     @TargetApi(23)
     private void requestPermissions() {
         PermissionsManager.getInstance().requestAllManifestPermissionsIfNecessary(this, new PermissionsResultAction() {
@@ -109,6 +104,7 @@ public class HomeActivity extends AppCompatActivity
         });
     }
 
+    //初始化底部fragment
     private void initContentFragments() {
         homeFragment = new HomeFragment();
         purchaseFragment = new TwoFragment();
@@ -121,7 +117,7 @@ public class HomeActivity extends AppCompatActivity
         MyFragmentPagerAdapter adapter = new MyFragmentPagerAdapter(getSupportFragmentManager(), mFragmentList);
         vpContent.setAdapter(adapter);
         // 设置ViewPager最大缓存的页面个数(cpu消耗少)
-        vpContent.setOffscreenPageLimit(2);
+        vpContent.setOffscreenPageLimit(3);
         vpContent.addOnPageChangeListener(this);
         vpContent.setCurrentItem(0);
     }
