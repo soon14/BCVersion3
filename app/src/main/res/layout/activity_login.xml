@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/container_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:background="@color/white"
+                android:id="@+id/linearLayout_account_pwd"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:orientation="vertical">
+
+
+                <EditText
+                    android:id="@+id/phone_edit"
+                    style="@style/combination_right_edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:hint="请输入手机号码"
+                    android:inputType="number"
+                    android:paddingLeft="@dimen/combination_text_edit_margin_left"
+                    android:paddingRight="10dp"
+                    android:textCursorDrawable="@null" />
+
+                <View style="@style/line" />
+
+                <EditText
+                    android:id="@+id/password_edit"
+                    style="@style/combination_right_edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/phone_edit"
+                    android:digits="@string/password_rule_digits"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_vertical"
+                    android:hint="请输入密码"
+                    android:inputType="textPassword"
+                    android:paddingLeft="@dimen/combination_text_edit_margin_left"
+                    android:paddingRight="10dp"
+                    android:textCursorDrawable="@null" />
+
+                <View style="@style/line" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/login"
+                style="@style/style_commont_button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:text="登录" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_size_20">
+
+                <TextView
+                    android:id="@+id/register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/common_size_20"
+                    android:text="还没账号？马上注册"
+                    android:textColor="@color/colorTheme"
+                    android:textSize="@dimen/font_size_12" />
+
+                <TextView
+                    android:id="@+id/findpass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/common_size_20"
+                    android:text="找回密码"
+                    android:textColor="@color/colorTheme"
+                    android:textSize="@dimen/font_size_12" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

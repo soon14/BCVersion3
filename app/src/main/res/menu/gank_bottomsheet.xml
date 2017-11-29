@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/hezhi"
+        android:icon="@drawable/img_dongtai_daihongdian_an"
+        android:title="和值" />
+    <item
+        android:id="@+id/santonghao"
+        android:icon="@drawable/img_dongtai_daihongdian_an"
+        android:title="三同号（豹子）" />
+    <item
+        android:id="@+id/sanbutong"
+        android:icon="@drawable/img_dongtai_daihongdian_an"
+        android:title="三不同号" />
+    <item
+        android:id="@+id/sanlianhaotongxuan"
+        android:icon="@drawable/img_dongtai_daihongdian_an"
+        android:title="三连号通选" />
+    <item
+        android:id="@+id/ertonghaofuxuan"
+        android:icon="@drawable/img_dongtai_daihongdian_an"
+        android:title="二同号复选" />
+    <item
+        android:id="@+id/erbutong"
+        android:icon="@drawable/img_dongtai_daihongdian_an"
+        android:title="二不同" />
+</menu>

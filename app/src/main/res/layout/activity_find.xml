@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View style="@style/line" />
+
+    <com.mrice.txl.appthree.view.IconTextView
+        android:id="@+id/sk_sk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/commonitem_click_bg"
+        app:left_icon="@drawable/icon_filter_prize"
+        app:name="刷卡收款" />
+
+    <View style="@style/line_leftMargin" />
+
+    <com.mrice.txl.appthree.view.IconTextView
+        android:id="@+id/sm_sk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:left_icon="@drawable/icon_filter_prize"
+        app:name="扫码收款" />
+
+    <View style="@style/line_leftMargin" />
+
+    <com.mrice.txl.appthree.view.IconTextView
+        android:id="@+id/de_sk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:left_icon="@drawable/icon_filter_prize"
+        app:name="大额收款" />
+
+    <View style="@style/line_leftMargin" />
+
+    <com.mrice.txl.appthree.view.IconTextView
+        android:id="@+id/cx_jy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:left_icon="@drawable/icon_filter_prize"
+        app:name="撤销交易" />
+
+    <View style="@style/line" />
+
+    <View
+        style="@style/line"
+        android:layout_marginTop="@dimen/common_size_15" />
+
+    <com.mrice.txl.appthree.view.IconTextView
+        android:id="@+id/d0_tk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:left_icon="@drawable/icon_filter_prize"
+        app:name="D0提款" />
+
+    <View style="@style/line" />
+
+    <View
+        style="@style/line"
+        android:layout_marginTop="@dimen/common_size_15" />
+
+    <com.mrice.txl.appthree.view.IconTextView
+        android:id="@+id/sy_zj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:left_icon="@drawable/icon_filter_prize"
+        app:name="生意专家" />
+
+    <View style="@style/line" />
+</LinearLayout>

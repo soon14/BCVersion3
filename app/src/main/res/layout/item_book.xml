@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <data>
+
+        <variable
+            name="bean"
+            type="com.mrice.txl.appthree.bean.DiscoverBean.PageInfo.DiscoverCaiBean" />
+
+    </data>
+
+    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ll_item_top"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/commonitem_click_bg"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <!--android:defaultPicType='@{2}'-->
+        <!--android:displayFadeImage='@{bean.images.large}'-->
+        <ImageView
+            android:id="@+id/iv_top_photo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:transitionName="@string/transition_book_img"
+            app:layout_collapseMode="parallax"
+            app:layout_collapseParallaxMultiplier="0.7" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/common_size_15"
+            android:layout_marginTop="@dimen/common_size_15"
+            android:layout_toRightOf="@id/iv_top_photo"
+            android:ellipsize="end"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:maxLines="2"
+            android:text="@{bean.title}"
+            android:textColor="@color/gray_666666"
+            android:textSize="@dimen/font_size_14" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/common_size_15"
+            android:layout_marginLeft="@dimen/common_size_15"
+            android:layout_toRightOf="@id/iv_top_photo"
+            android:ellipsize="end"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:maxLines="2"
+            android:textColor="@color/colorTitle"
+            android:textSize="@dimen/font_size_14" />
+
+        <View
+            style="@style/line_2px"
+            android:layout_below="@+id/tv_time" />
+
+    </RelativeLayout>
+</layout>

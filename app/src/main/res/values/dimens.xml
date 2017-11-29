@@ -1,0 +1,111 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">173dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="titlebar_height">56dp</dimen>
+
+    <!--渐变时还没到布局全部就已经不透明了，距离 45dp-->
+    <dimen name="base_header_activity_slide_more">45dp</dimen>
+
+    <dimen name="home_header_size">291dp</dimen>
+
+    <dimen name="nav_bar_height">56dp</dimen>
+    <dimen name="nav_bar_height_more">58dp</dimen>
+
+    <!--用来测电影详情页-->
+    <dimen name="new_home_header_size">325dp</dimen>
+
+
+    <dimen name="slide_shape_title_ng">310dp</dimen>
+
+    <!--电影详情图片的宽高-->
+    <dimen name="movie_detail_width">125dp</dimen>
+    <dimen name="movie_detail_height">165dp</dimen>
+    <!--书籍详情图片的宽高-->
+    <dimen name="book_detail_width">120dp</dimen>
+    <dimen name="book_detail_height">165dp</dimen>
+    <!-- font size-->
+    <dimen name="font_size_5">5sp</dimen>
+    <dimen name="font_size_9">9sp</dimen>
+    <dimen name="font_size_10">10sp</dimen>
+    <dimen name="font_size_12">12sp</dimen>
+    <dimen name="font_size_13">13sp</dimen>
+    <dimen name="font_size_14">14sp</dimen>
+    <dimen name="font_size_15">15sp</dimen>
+    <dimen name="font_size_16">16sp</dimen>
+    <dimen name="font_size_17">17sp</dimen>
+    <dimen name="font_size_18">18sp</dimen>
+    <dimen name="font_size_19">19sp</dimen>
+    <dimen name="font_size_20">20sp</dimen>
+    <dimen name="font_size_22">22sp</dimen>
+    <dimen name="font_size_24">24sp</dimen>
+    <dimen name="font_size_25">25sp</dimen>
+    <dimen name="font_size_26">26sp</dimen>
+    <dimen name="font_size_27">27sp</dimen>
+
+
+    <dimen name="common_size_1">1dp</dimen>
+    <dimen name="common_size_2">2dp</dimen>
+    <dimen name="common_size_3">3dp</dimen>
+    <dimen name="common_size_4">4dp</dimen>
+    <dimen name="common_size_5">5dp</dimen>
+    <dimen name="common_size_6">6dp</dimen>
+    <dimen name="common_size_7">7dp</dimen>
+    <dimen name="common_size_8">8dp</dimen>
+    <dimen name="common_size_9">9dp</dimen>
+    <dimen name="common_size_10">10dp</dimen>
+    <dimen name="common_size_11">11dp</dimen>
+    <dimen name="common_size_12">12dp</dimen>
+    <dimen name="common_size_13">13dp</dimen>
+    <dimen name="common_size_14">14dp</dimen>
+    <dimen name="common_size_15">15dp</dimen>
+    <dimen name="common_size_16">16dp</dimen>
+    <dimen name="common_size_17">17dp</dimen>
+    <dimen name="common_size_18">18dp</dimen>
+    <dimen name="common_size_19">19dp</dimen>
+    <dimen name="common_size_20">20dp</dimen>
+    <dimen name="common_size_21">21dp</dimen>
+    <dimen name="common_size_22">22dp</dimen>
+
+
+    <!--字体大小-->
+    <dimen name="font_size_xsmall">12sp</dimen>
+    <dimen name="font_size_small">15sp</dimen>
+    <dimen name="font_size_normal">16sp</dimen>
+    <dimen name="font_size_middle">19sp</dimen>
+    <dimen name="font_size_large">20sp</dimen>
+    <dimen name="font_size_xlarge">30sp</dimen>
+    <dimen name="font_size_large_more">22sp</dimen>
+    <dimen name="font_size_super_large">50sp</dimen>
+
+
+    <dimen name="common_distance_level">15dp</dimen>
+    <dimen name="common_distance_level_1">20dp</dimen>
+    <dimen name="common_distance_level_2">30dp</dimen>
+    <dimen name="common_distance_level_3">50dp</dimen>
+    <dimen name="common_distance_level_4">60dp</dimen>
+    <dimen name="common_distance_level_5">70dp</dimen>
+    <!--竖直方向、正式的内容距离ActionBar的间隔-->
+    <dimen name="content_margin_actionbar">@dimen/common_distance_level_1</dimen>
+    <!--表单页面、表单距离左边间隔-->
+    <dimen name="combination_text_edit_margin_left">@dimen/common_distance_level_1</dimen>
+    <!--表单页面、组合项直接间隔-->
+    <dimen name="combination_margin_vertical">@dimen/common_distance_level_2</dimen>
+    <!--actionbar的高度-->
+    <dimen name="actionbar_height">50dp</dimen>
+    <!--表单页底部执行按钮离上面view的距离-->
+    <dimen name="order_next_btn_margin_top">30dp</dimen>
+    <!--表单页底部执行按钮离屏幕左侧(右侧)距离-->
+    <dimen name="order_next_btn_margin_horizontal">20dp</dimen>
+    <!--表单页面，单个item的高度-->
+    <dimen name="order_item_height">44dp</dimen>
+    <!--表单页面，单个item的高度加上提示语高度-->
+    <dimen name="order_item_height_hint">60dp</dimen>
+    <!-- 商户信息页面单项top距离 -->
+    <dimen name="account_info_item_top">@dimen/common_distance_level_1</dimen>
+    <!--版本:3.1  end-->
+</resources>

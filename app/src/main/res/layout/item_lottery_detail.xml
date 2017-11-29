@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ll_item_top"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/commonitem_click_bg"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lottery_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/common_size_15"
+            android:layout_marginTop="@dimen/common_size_15"
+            android:layout_toRightOf="@id/iv_top_photo"
+            android:text="开奖结果"
+            android:textColor="@color/colorContent"
+            android:textSize="@dimen/font_size_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lottery_rank_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/common_size_15"
+            android:ellipsize="end"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:maxLines="2"
+            android:text="第100期"
+            android:textColor="@color/colorSubtitle"
+            android:textSize="@dimen/font_size_16"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_ball"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/common_size_10"
+            android:layout_toRightOf="@id/iv_top_photo"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/common_size_10" />
+        <!--<TextView-->
+        <!--android:id="@+id/lottery_result"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_marginBottom="@dimen/common_size_15"-->
+        <!--android:layout_marginLeft="@dimen/common_size_15"-->
+        <!--android:layout_toRightOf="@id/iv_top_photo"-->
+        <!--android:ellipsize="end"-->
+        <!--android:focusable="true"-->
+        <!--android:focusableInTouchMode="true"-->
+        <!--android:maxLines="2"-->
+        <!--android:text="03 36 36 25 36 25 36"-->
+        <!--android:textColor="@color/colorTheme"-->
+        <!--android:textSize="@dimen/font_size_18" />-->
+
+        <View
+            style="@style/line_2px"
+            android:layout_below="@+id/tv_time" />
+
+    </RelativeLayout>
+</layout>
