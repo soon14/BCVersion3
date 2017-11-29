@@ -16,7 +16,6 @@ import android.widget.ListView;
 import com.mrice.txl.appthree.R;
 import com.mrice.txl.appthree.adapter.FOneAdapter;
 import com.mrice.txl.appthree.ui.RebackActivity;
-import com.mrice.txl.appthree.ui.purchase.PageOne;
 import com.mrice.txl.appthree.view.webview.WebViewActivity;
 import com.bumptech.glide.Glide;
 import com.youth.banner.Banner;

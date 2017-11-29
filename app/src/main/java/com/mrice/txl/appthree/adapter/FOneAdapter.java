@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.mrice.txl.appthree.R;
-import com.mrice.txl.appthree.ui.purchase.PageOne;
+import com.mrice.txl.appthree.ui.me.PageOne;
 
 import java.util.List;
 

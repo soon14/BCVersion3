@@ -7,7 +7,7 @@ import com.mrice.txl.appthree.R;
 import com.mrice.txl.appthree.base.baseadapter.BaseRecyclerViewAdapter;
 import com.mrice.txl.appthree.base.baseadapter.BaseRecyclerViewHolder;
 import com.mrice.txl.appthree.databinding.LayoutRebackItemBinding;
-import com.mrice.txl.appthree.ui.purchase.RebackItem;
+import com.mrice.txl.appthree.ui.me.RebackItem;
 
 /**
  * Created by app on 2017/10/13.

@@ -1,4 +1,4 @@
-package com.mrice.txl.appthree.ui.purchase;
+package com.mrice.txl.appthree.ui.me;
 
 /**
  * Created by app on 2017/10/13.

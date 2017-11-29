@@ -8,7 +8,7 @@ import com.mrice.txl.appthree.R;
 import com.mrice.txl.appthree.adapter.RebackAdapter;
 import com.mrice.txl.appthree.base.BaseActivity;
 import com.mrice.txl.appthree.databinding.LayoutRebackBinding;
-import com.mrice.txl.appthree.ui.purchase.RebackItem;
+import com.mrice.txl.appthree.ui.me.RebackItem;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -31,8 +31,6 @@ public class RebackActivity extends BaseActivity<LayoutRebackBinding> {
         showContentView();
         type = getIntent().getIntExtra("type", type);
         setTitle("往期回顾");
-        bindingView.lv.setPullRefreshEnabled(false);
-        bindingView.lv.setLoadingMoreEnabled(false);
         bindingView.lv.setLayoutManager(new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL));
         // 需加，不然滑动不流畅
         bindingView.lv.setNestedScrollingEnabled(false);
