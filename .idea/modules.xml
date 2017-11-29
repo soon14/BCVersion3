@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PaiLie3.iml" filepath="$PROJECT_DIR$/PaiLie3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NewVersion.iml" filepath="$PROJECT_DIR$/NewVersion.iml" />
+      <module fileurl="file://F:\ThirdWorks\NewVersion\PaiLie3.iml" filepath="F:\ThirdWorks\NewVersion\PaiLie3.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://F:\ThirdWorks\NewVersion\app\app.iml" filepath="F:\ThirdWorks\NewVersion\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/http/http.iml" filepath="$PROJECT_DIR$/http/http.iml" />
-      <module fileurl="file://$PROJECT_DIR$/xrecyclerview/xrecyclerview.iml" filepath="$PROJECT_DIR$/xrecyclerview/xrecyclerview.iml" />
+      <module fileurl="file://F:\ThirdWorks\NewVersion\http\http.iml" filepath="F:\ThirdWorks\NewVersion\http\http.iml" />
+      <module fileurl="file://F:\ThirdWorks\NewVersion\xrecyclerview\xrecyclerview.iml" filepath="F:\ThirdWorks\NewVersion\xrecyclerview\xrecyclerview.iml" />
       <module fileurl="file://$PROJECT_DIR$/zoomlibrary/zoomlibrary.iml" filepath="$PROJECT_DIR$/zoomlibrary/zoomlibrary.iml" />
+      <module fileurl="file://F:\ThirdWorks\NewVersion\zoomlibrary\zoomlibrary.iml" filepath="F:\ThirdWorks\NewVersion\zoomlibrary\zoomlibrary.iml" />
     </modules>
   </component>
 </project>
