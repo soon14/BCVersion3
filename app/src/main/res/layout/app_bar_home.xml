@@ -23,9 +23,108 @@
 
         </android.support.design.widget.AppBarLayout>
 
-        <include
-            android:id="@+id/content_home"
-            layout="@layout/content_home" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            >
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vp_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorWhite"
+                    android:descendantFocusability="blocksDescendants" />
+            </FrameLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/gray"></View>
+            <LinearLayout
+                android:id="@+id/main_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/btn_container_purchase"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/btn_purchase"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:drawableTop="@drawable/tab_main_bg"
+                        android:onClick="onTabClicked"
+                        android:paddingBottom="5dip"
+                        android:paddingTop="7dip"
+                        android:scaleType="matrix"
+                        android:text="彩讯"
+                        android:textColor="@color/select_gank_day"
+                        android:textSize="12sp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_container_service_list"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+
+                        android:id="@+id/btn_service"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:drawableTop="@drawable/tab_discover_bg"
+                        android:onClick="onTabClicked"
+                        android:paddingBottom="5dip"
+                        android:paddingTop="7dip"
+                        android:scaleType="matrix"
+                        android:text="选号"
+                        android:textColor="@color/select_gank_day"
+                        android:textSize="12sp" />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/btn_container_user"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/btn_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:background="@color/white"
+                        android:drawableTop="@drawable/tab_user_bg"
+                        android:onClick="onTabClicked"
+                        android:paddingBottom="5dip"
+                        android:paddingTop="7dip"
+                        android:scaleType="matrix"
+                        android:text="我的"
+                        android:textColor="@color/select_gank_day"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
 
     </android.support.design.widget.CoordinatorLayout>
 </layout>
