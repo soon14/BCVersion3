@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.mrice.txl.appthree.ui.me.KJHistoryActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_margin="10dp"
+                android:id="@+id/img"
+                android:src="@drawable/lottery_icon_ssq"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/b1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/comm_ball_red"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/b2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/comm_ball_red"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/b3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/comm_ball_red"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/b4"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/comm_ball_red"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/b5"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/comm_ball_red"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/b6"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/comm_ball_red"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/b7"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/comm_ball_red"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

@@ -25,6 +25,7 @@ import com.mrice.txl.appthree.runtimepermissions.PermissionsResultAction;
 
 import com.mrice.txl.appthree.ui.UserFragment;
 import com.mrice.txl.appthree.ui.home.HomeFragment;
+import com.mrice.txl.appthree.ui.me.KJFragment;
 import com.mrice.txl.appthree.ui.me.TwoFragment;
 import com.mrice.txl.appthree.view.MyFragmentPagerAdapter;
 
@@ -37,7 +38,7 @@ public class HomeActivity extends AppCompatActivity
     private Fragment[] fragments;
     private HomeFragment homeFragment;
     private UserFragment userFragment;
-    private TwoFragment purchaseFragment;
+    private KJFragment kjFragment;
     // 一定需要对应的bean
     private ActivityHomeBinding mBinding;
     private ViewPager vpContent;
@@ -107,9 +108,9 @@ public class HomeActivity extends AppCompatActivity
     //初始化底部fragment
     private void initContentFragments() {
         homeFragment = new HomeFragment();
-        purchaseFragment = new TwoFragment();
+        kjFragment = new KJFragment();
         userFragment = new UserFragment();
-        fragments = new Fragment[]{homeFragment, purchaseFragment, userFragment};
+        fragments = new Fragment[]{homeFragment, kjFragment, userFragment};
         ArrayList<Fragment> mFragmentList = new ArrayList<>();
         for (Fragment fragment : fragments) {
             mFragmentList.add(fragment);

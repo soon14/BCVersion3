@@ -231,6 +231,7 @@
     <string name="beijing">为了保证正确生成方案。投注时间和真实销售时间比较可能会提前。\n请注意，这仅是模拟投注，投注与奖金都是模拟币，不涉及到任何真实资金。</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="title_activity_home2">HomeActivity2</string>
+    <string name="title_activity_kjhistory">KJHistoryActivity</string>
 
 
 </resources>
