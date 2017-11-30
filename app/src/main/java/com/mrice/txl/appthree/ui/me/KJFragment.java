@@ -11,7 +11,7 @@ import android.widget.LinearLayout;
 
 import com.mrice.txl.appthree.R;
 
-public class KJFragment extends Fragment implements View.OnClickListener{
+public class KJFragment extends Fragment implements View.OnClickListener {
 
     private LinearLayout layoutSSQ;
     private LinearLayout layoutQLC;
@@ -44,15 +44,15 @@ public class KJFragment extends Fragment implements View.OnClickListener{
         initView();
     }
 
-    private void initView(){
-        layoutSSQ=(LinearLayout) getView().findViewById(R.id.layoutSSQ);
-        layoutQLC=(LinearLayout) getView().findViewById(R.id.layoutQLC);
-        layoutDLT=(LinearLayout) getView().findViewById(R.id.layoutDLT);
-        layoutQXC=(LinearLayout) getView().findViewById(R.id.layoutQXC);
-        layoutPL3=(LinearLayout) getView().findViewById(R.id.layoutPL3);
-        layoutPL5=(LinearLayout) getView().findViewById(R.id.layoutPL5);
-        layoutK3=(LinearLayout) getView().findViewById(R.id.layoutK3);
-        layout11X5=(LinearLayout) getView().findViewById(R.id.layout11X5);
+    private void initView() {
+        layoutSSQ = (LinearLayout) getView().findViewById(R.id.layoutSSQ);
+        layoutQLC = (LinearLayout) getView().findViewById(R.id.layoutQLC);
+        layoutDLT = (LinearLayout) getView().findViewById(R.id.layoutDLT);
+        layoutQXC = (LinearLayout) getView().findViewById(R.id.layoutQXC);
+        layoutPL3 = (LinearLayout) getView().findViewById(R.id.layoutPL3);
+        layoutPL5 = (LinearLayout) getView().findViewById(R.id.layoutPL5);
+        layoutK3 = (LinearLayout) getView().findViewById(R.id.layoutK3);
+        layout11X5 = (LinearLayout) getView().findViewById(R.id.layout11X5);
         layoutSSQ.setOnClickListener(this);
         layoutQLC.setOnClickListener(this);
         layoutDLT.setOnClickListener(this);
@@ -65,7 +65,34 @@ public class KJFragment extends Fragment implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        Intent i=new Intent(getActivity(),KJDetailsActivity.class);
+        Intent i = new Intent(getActivity(), KJDetailsActivity.class);
+        switch (v.getId()){
+            case R.id.layoutSSQ:
+                i.putExtra("position", 1);
+                break;
+            case R.id.layoutQLC:
+                i.putExtra("position", 2);
+                break;
+            case R.id.layoutDLT:
+                i.putExtra("position", 3);
+                break;
+            case R.id.layoutQXC:
+                i.putExtra("position", 4);
+                break;
+            case R.id.layoutPL3:
+                i.putExtra("position", 5);
+                break;
+            case R.id.layoutPL5:
+                i.putExtra("position", 6);
+                break;
+            case R.id.layoutK3:
+                i.putExtra("position", 7);
+                break;
+            case R.id.layout11X5:
+                i.putExtra("position", 8);
+                break;
+
+        }
         startActivity(i);
     }
 }

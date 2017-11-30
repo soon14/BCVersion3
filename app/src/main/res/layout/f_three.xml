@@ -24,6 +24,7 @@
 
                 <LinearLayout
                     android:id="@+id/layoutSSQ"
+                    android:tag="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -63,6 +64,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:tag="2"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:padding="5dp">
@@ -104,6 +106,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:tag="3"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:padding="5dp">
@@ -139,6 +142,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:tag="4"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:padding="5dp">
@@ -180,6 +184,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:tag="5"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:padding="5dp">
@@ -215,6 +220,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:tag="6"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:padding="5dp">
@@ -256,6 +262,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:tag="7"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:padding="5dp">
@@ -284,6 +291,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:tag="8"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:padding="5dp">
