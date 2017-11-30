@@ -166,7 +166,7 @@
     <color name="blue_00468C">#00468C</color><!--btn selected 背景-->
     <color name="blue_0c79ff">#0c79ff</color>
     <color name="blue_0079cc">#0079cc</color>
-    <color name="gray">#f7f7f7</color>
+    <color name="gray">#CCCCCC</color>
     <color name="gray_f2f2f2">#f2f2f2</color>
     <color name="gray_f4f4f4">#f4f4f4</color>
     <color name="gray_333333">#333333</color>
