@@ -18,7 +18,7 @@ import com.mrice.txl.appthree.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends BaseFragment<FragmentHomeBinding> implements ViewPager.OnPageChangeListener{
 
-    private String[] mTitles=new String[]{"双色球","大乐透","排列三","排列五"};
+    private String[] mTitles=new String[]{"福利彩票","体育彩票"};
     private HomeViewpagerAdapter homeViewpagerAdapter;
 
     @Override
