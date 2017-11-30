@@ -65,7 +65,7 @@ public class KJFragment extends Fragment implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        Intent i=new Intent(getActivity(),KJHistoryActivity.class);
+        Intent i=new Intent(getActivity(),KJDetailsActivity.class);
         startActivity(i);
     }
 }

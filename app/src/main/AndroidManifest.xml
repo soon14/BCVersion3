@@ -107,11 +107,11 @@
             android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.me.KJDetailsActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme"></activity>
         <activity
             android:name=".ui.me.KJHistoryActivity"
             android:label="@string/title_activity_kjhistory"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
