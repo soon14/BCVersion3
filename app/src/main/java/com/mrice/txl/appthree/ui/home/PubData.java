@@ -1,6 +1,7 @@
 package com.mrice.txl.appthree.ui.home;
 
 import com.mrice.txl.appthree.bean.MultipleItem;
+import com.mrice.txl.appthree.bean.YCItem;
 import com.mrice.txl.appthree.ui.me.RebackItem;
 
 import java.util.ArrayList;
@@ -596,5 +597,91 @@ public class PubData {
         }
         Arrays.sort(result);
         return result;
+    }
+
+    public static List<YCItem> getYcData() {
+        List<YCItem> list = new ArrayList<>();
+        YCItem ycItem = new YCItem();
+        ycItem.setId(0);
+        ycItem.setName("麦丽素");
+        ycItem.setLx("双色球");
+        ycItem.setZj("近5中2");
+        ycItem.setSj("明日开奖");
+        ycItem.setQh("第17142期");
+        ycItem.setContent("file:///android_asset/yc1.html");
+        list.add(ycItem);
+        ycItem = new YCItem();
+        ycItem.setId(1);
+        ycItem.setName("仡仡");
+        ycItem.setLx("双色球");
+        ycItem.setZj("近7中5");
+        ycItem.setSj("明日开奖");
+        ycItem.setQh("第17142期");
+        ycItem.setContent("file:///android_asset/yc2.html");
+        list.add(ycItem);
+        ycItem = new YCItem();
+        ycItem.setId(2);
+        ycItem.setName("黄小仙");
+        ycItem.setLx("双色球");
+        ycItem.setZj("近7中2");
+        ycItem.setSj("明日开奖");
+        ycItem.setQh("第17141期");
+        ycItem.setContent("file:///android_asset/yc3.html");
+        list.add(ycItem);
+        ycItem = new YCItem();
+        ycItem.setId(3);
+        ycItem.setName("草庐居士");
+        ycItem.setLx("大乐透");
+        ycItem.setZj("近7中3");
+        ycItem.setSj("明日开奖");
+        ycItem.setQh("第17141期");
+        ycItem.setContent("file:///android_asset/yc4.html");
+        list.add(ycItem);
+        ycItem = new YCItem();
+        ycItem.setId(4);
+        ycItem.setName("田野");
+        ycItem.setLx("七乐彩");
+        ycItem.setZj("近5中2");
+        ycItem.setSj("明日开奖");
+        ycItem.setQh("第17141期");
+        ycItem.setContent("file:///android_asset/yc5.html");
+        list.add(ycItem);
+        ycItem = new YCItem();
+        ycItem.setId(5);
+        ycItem.setName("何明");
+        ycItem.setLx("七乐彩");
+        ycItem.setZj("近5中1");
+        ycItem.setSj("明日开奖");
+        ycItem.setQh("第17141期");
+        ycItem.setContent("file:///android_asset/yc6.html");
+        list.add(ycItem);
+        ycItem = new YCItem();
+        ycItem.setId(6);
+        ycItem.setName("喜子");
+        ycItem.setLx("排列三");
+        ycItem.setZj("近5中2");
+        ycItem.setSj("今日开奖");
+        ycItem.setQh("第328期");
+        ycItem.setContent("file:///android_asset/yc7.html");
+        list.add(ycItem);
+        ycItem = new YCItem();
+        ycItem.setId(7);
+        ycItem.setName("邱博士");
+        ycItem.setLx("排列三");
+        ycItem.setZj("近7中3");
+        ycItem.setSj("后日开奖");
+        ycItem.setQh("第328期");
+        ycItem.setContent("file:///android_asset/yc8.html");
+        list.add(ycItem);
+        ycItem = new YCItem();
+        ycItem.setId(8);
+        ycItem.setName("安生");
+        ycItem.setLx("七星彩");
+        ycItem.setZj("近7中3");
+        ycItem.setSj("后日开奖");
+        ycItem.setQh("第17142期");
+        ycItem.setContent("file:///android_asset/yc9.html");
+        list.add(ycItem);
+        return list;
     }
 }

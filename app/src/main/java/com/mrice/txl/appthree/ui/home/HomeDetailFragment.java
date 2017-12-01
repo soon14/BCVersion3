@@ -31,11 +31,12 @@ import java.util.List;
 /**
  * Created by app on 2017/11/29.
  */
-public class HomeDetailFragment extends BaseFragment<FragmentHomeDetailsBinding>{
+public class HomeDetailFragment extends BaseFragment<FragmentHomeDetailsBinding> {
 
     private int position;
     private List<MultipleItem> datas;
     private HomeAdapter adapter;
+
     public static HomeDetailFragment newInstance(int position, String title) {
         Bundle args = new Bundle();
         args.putString("title", title);
@@ -49,9 +50,9 @@ public class HomeDetailFragment extends BaseFragment<FragmentHomeDetailsBinding>
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         showContentView();
-        Bundle args= getArguments();
-        if(args!=null){
-            position=args.getInt("position");
+        Bundle args = getArguments();
+        if (args != null) {
+            position = args.getInt("position");
         }
         initView(position);
     }
@@ -62,12 +63,12 @@ public class HomeDetailFragment extends BaseFragment<FragmentHomeDetailsBinding>
     }
 
 
-    private void initView(int p){
+    private void initView(int p) {
 
         View headerView = LayoutInflater.from(getActivity()).inflate(R.layout.layout_banner, null);
         List<String> urls = new ArrayList<String>();
         final List<String> paths = new ArrayList<>();
-        switch (p){
+        switch (p) {
             case 0:
                 urls.add("file:///android_asset/pt1_1.jpg");
                 urls.add("file:///android_asset/pt1_2.jpg");
@@ -101,13 +102,13 @@ public class HomeDetailFragment extends BaseFragment<FragmentHomeDetailsBinding>
         banner.setOnBannerListener(new OnBannerListener() {
             @Override
             public void OnBannerClick(int position) {
-                WebViewActivity.loadUrl(getContext(), paths.get(position), "");
+                WebViewActivity.loadUrl(getContext(), paths.get(position), "最新资讯");
             }
         });
         //banner设置方法全部调用完毕时最后调用
         banner.start();
-        datas=PubData.getHomeData(p);
-        adapter=new HomeAdapter(datas);
+        datas = PubData.getHomeData(p);
+        adapter = new HomeAdapter(datas);
         adapter.addHeaderView(headerView);
         //创建布局管理
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
@@ -118,21 +119,21 @@ public class HomeDetailFragment extends BaseFragment<FragmentHomeDetailsBinding>
         adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                if(datas.get(position).getItemType()==MultipleItem.MUKUAI){
+                if (datas.get(position).getItemType() == MultipleItem.MUKUAI) {
                     Intent i = new Intent(getActivity(), KJDetailsActivity.class);
-                    if("双色球".equals(datas.get(position).getTitle())){
+                    if ("双色球".equals(datas.get(position).getTitle())) {
                         i.putExtra("position", 1);
-                    }else if("七乐彩".equals(datas.get(position).getTitle())){
+                    } else if ("七乐彩".equals(datas.get(position).getTitle())) {
                         i.putExtra("position", 2);
-                    }else if("大乐透".equals(datas.get(position).getTitle())){
+                    } else if ("大乐透".equals(datas.get(position).getTitle())) {
                         i.putExtra("position", 3);
-                    }else if("排列三".equals(datas.get(position).getTitle())){
+                    } else if ("排列三".equals(datas.get(position).getTitle())) {
                         i.putExtra("position", 5);
-                    }else if("排列五".equals(datas.get(position).getTitle())){
+                    } else if ("排列五".equals(datas.get(position).getTitle())) {
                         i.putExtra("position", 6);
                     }
                     startActivity(i);
-                }else if(datas.get(position).getItemType()==MultipleItem.XINWEN){
+                } else if (datas.get(position).getItemType() == MultipleItem.XINWEN) {
                     WebViewActivity.loadUrl(getContext(), datas.get(position).getContent(), "近期彩讯");
                 }
             }

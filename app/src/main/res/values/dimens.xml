@@ -108,4 +108,18 @@
     <!-- 商户信息页面单项top距离 -->
     <dimen name="account_info_item_top">@dimen/common_distance_level_1</dimen>
     <!--版本:3.1  end-->
+    <dimen name="trend_x_item_width">33dp</dimen>
+    <dimen name="trend_x_item_name_width">44dp</dimen>
+    <dimen name="trend_x_item_height">33dp</dimen>
+    <dimen name="trend_y_item_width">60dp</dimen>
+    <dimen name="trend_y_item_height">33dp</dimen>
+    <dimen name="trend_x_text_size">14dp</dimen>
+    <dimen name="trend_y_text_size">12dp</dimen>
+    <dimen name="trend_content_text_size">14dp</dimen>
+    <dimen name="trend_corner_text_size">14dp</dimen>
+    <dimen name="trend_ball_radius">12dp</dimen>
+    <dimen name="trend_sulcus_width">6dp</dimen>
+    <dimen name="trend_sulcus_height">6dp</dimen>
+    <dimen name="trend_sulcus_bottom">9dp</dimen>
+    <dimen name="trend_time_height">26dp</dimen>
 </resources>
