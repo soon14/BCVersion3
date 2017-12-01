@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
 
         title.setText(R.string.fragment_purchase_title);
 
-        SPUtils.putBoolean(Constants.IS_LOGIN, true);
+//        SPUtils.putBoolean(Constants.IS_LOGIN, true);
         SPUtils.putBoolean(Constants.IS_SPLASH, true);
 
     }

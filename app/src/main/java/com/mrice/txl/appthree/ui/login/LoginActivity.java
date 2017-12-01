@@ -20,6 +20,7 @@ import com.mrice.txl.appthree.http.cache.ACache;
 import com.mrice.txl.appthree.ui.ModifyPwdActivity;
 import com.mrice.txl.appthree.ui.register.RegisterActivity;
 import com.mrice.txl.appthree.utils.PhoneNumberUtil;
+import com.mrice.txl.appthree.utils.SPUtils;
 import com.mrice.txl.appthree.utils.StringUtil;
 import com.mrice.txl.appthree.utils.ToastUtil;
 import com.google.gson.Gson;
@@ -162,6 +163,7 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding> {
                         if (response.isRequestSuccess()) {
                             //请求成功，进入登录逻辑
                             mACache.put(Constants.USER, response.getUser());
+                            SPUtils.putBoolean(Constants.IS_LOGIN, true);
                             toMainActivity();
                         } else {
                             ToastUtil.showToast("用户名或密码错误");

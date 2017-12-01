@@ -38,6 +38,7 @@ public class UserFragment extends BaseFragment<FragmentUserBinding> {
     private ACache mAcache;
     float arr[] = {0.2f, 1.2f, 0.6f, 0.3f, 0.5f, 0.8f};//定义一个数组
     private boolean clear = false;
+    boolean isLogin = false;
 
 
     @Override
@@ -56,12 +57,12 @@ public class UserFragment extends BaseFragment<FragmentUserBinding> {
     private void loadUserData() {
         mAcache = ACache.get(getContext());
         LoginResponse.User user = (LoginResponse.User) mAcache.getAsObject(Constants.USER);
-        boolean isLogin = SPUtils.getBoolean(Constants.IS_LOGIN, false);
+        isLogin = SPUtils.getBoolean(Constants.IS_LOGIN, false);
         if (isLogin && user != null) {
             bindingView.tvPhone.setText(user.getPhone() + "，" + "欢迎您");
             loginOut.setVisibility(View.VISIBLE);
-        }else{
-            loginOut.setVisibility(View.GONE);
+        } else {
+            loginOut.setVisibility(View.VISIBLE);
         }
 
     }
@@ -99,7 +100,9 @@ public class UserFragment extends BaseFragment<FragmentUserBinding> {
                 WebViewActivity.loadUrl(getContext(), "file:///android_asset/wenda.html", "帮助");
                 break;
             case R.id.loginOut:
-                loginOut();
+                if(isLogin) {
+                    loginOut();
+                }
                 break;
             case R.id.introduction:
                 NavIntroductionActivity.startHome(getContext());
@@ -111,7 +114,7 @@ public class UserFragment extends BaseFragment<FragmentUserBinding> {
                 break;
             case R.id.tv_phone:
                 Intent intent = new Intent(getContext(), LoginActivity.class);
-                startActivityForResult(intent,22);
+                startActivityForResult(intent, 22);
                 break;
             case R.id.shoucang:
                 Intent i = new Intent(getContext(), StarActivity.class);
@@ -143,10 +146,10 @@ public class UserFragment extends BaseFragment<FragmentUserBinding> {
             public void onClick(DialogInterface dialogInterface, int i) {
                 SPUtils.putBoolean(Constants.IS_LOGIN, false);
                 Intent intent = new Intent(getContext(), LoginActivity.class);
-                startActivityForResult(intent,22);
+                startActivityForResult(intent, 22);
                 mAcache.clear();
                 bindingView.tvPhone.setText("未登录，点击登录");
-                loginOut.setVisibility(View.GONE);
+                //loginOut.setVisibility(View.GONE);
                 //getActivity().finish();
                 dialogInterface.dismiss();
             }
@@ -161,8 +164,8 @@ public class UserFragment extends BaseFragment<FragmentUserBinding> {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(resultCode==RESULT_OK){
-            if(requestCode==22){
+        if (resultCode == RESULT_OK) {
+            if (requestCode == 22) {
                 LoginResponse.User user = (LoginResponse.User) mAcache.getAsObject(Constants.USER);
                 bindingView.tvPhone.setText(user.getPhone() + "，" + "欢迎您");
                 loginOut.setVisibility(View.VISIBLE);

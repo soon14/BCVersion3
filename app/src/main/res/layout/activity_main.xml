@@ -54,7 +54,7 @@
                         android:paddingBottom="5dip"
                         android:paddingTop="7dip"
                         android:scaleType="matrix"
-                        android:text="彩讯"
+                        android:text="主页"
                         android:textColor="@color/select_gank_day"
                         android:textSize="12sp" />
 
@@ -78,7 +78,7 @@
                         android:paddingBottom="5dip"
                         android:paddingTop="7dip"
                         android:scaleType="matrix"
-                        android:text="选号"
+                        android:text="开奖"
                         android:textColor="@color/select_gank_day"
                         android:textSize="12sp" />
 

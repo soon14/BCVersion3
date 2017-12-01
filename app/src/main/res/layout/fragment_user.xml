@@ -16,7 +16,6 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorTheme"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -36,7 +35,6 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="未登录，点击登录"
-                    android:textColor="@color/white"
                     android:textSize="15sp"
                     android:layout_marginBottom="10dp"
                     android:textStyle="bold" />
@@ -70,7 +68,7 @@
                 android:id="@+id/share"
                 style="@style/menuItem"
                 android:clickable="true"
-                android:drawableLeft="@drawable/comments"
+                android:drawableLeft="@drawable/discount"
                 android:layout_marginLeft="15dp"
                 android:text="   分享"
                 android:visibility="visible" />
@@ -96,7 +94,7 @@
                     style="@style/menuItem"
                     android:clickable="true"
                     android:layout_marginLeft="15dp"
-                    android:drawableLeft="@drawable/help"
+                    android:drawableLeft="@drawable/information"
                     android:text="   帮助"
                     android:visibility="visible" />
 
@@ -110,7 +108,7 @@
                     android:id="@+id/updatePassword"
                     style="@style/menuItem"
                     android:clickable="true"
-                    android:drawableLeft="@drawable/edit"
+                    android:drawableLeft="@drawable/survey"
                     android:layout_marginLeft="15dp"
                     android:text="   修改密码" />
 
@@ -123,7 +121,7 @@
                     android:id="@+id/banben"
                     style="@style/menuItem"
                     android:clickable="true"
-                    android:drawableLeft="@drawable/set"
+                    android:drawableLeft="@drawable/attachment"
                     android:layout_marginLeft="15dp"
                     android:text="   版本" />
 
