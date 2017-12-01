@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.mrice.txl.appthree.R;
 import com.mrice.txl.appthree.StarActivity;
@@ -39,6 +40,7 @@ public class UserFragment extends BaseFragment<FragmentUserBinding> {
     float arr[] = {0.2f, 1.2f, 0.6f, 0.3f, 0.5f, 0.8f};//定义一个数组
     private boolean clear = false;
     boolean isLogin = false;
+    LoginResponse.User user=null;
 
 
     @Override
@@ -56,7 +58,7 @@ public class UserFragment extends BaseFragment<FragmentUserBinding> {
 
     private void loadUserData() {
         mAcache = ACache.get(getContext());
-        LoginResponse.User user = (LoginResponse.User) mAcache.getAsObject(Constants.USER);
+        user = (LoginResponse.User) mAcache.getAsObject(Constants.USER);
         isLogin = SPUtils.getBoolean(Constants.IS_LOGIN, false);
         if (isLogin && user != null) {
             bindingView.tvPhone.setText(user.getPhone() + "，" + "欢迎您");
@@ -102,6 +104,8 @@ public class UserFragment extends BaseFragment<FragmentUserBinding> {
             case R.id.loginOut:
                 if(isLogin) {
                     loginOut();
+                }else {
+                    Toast.makeText(getActivity(),"您还没有登录",Toast.LENGTH_SHORT).show();
                 }
                 break;
             case R.id.introduction:
@@ -148,6 +152,8 @@ public class UserFragment extends BaseFragment<FragmentUserBinding> {
                 Intent intent = new Intent(getContext(), LoginActivity.class);
                 startActivityForResult(intent, 22);
                 mAcache.clear();
+                user = (LoginResponse.User) mAcache.getAsObject(Constants.USER);
+                isLogin = SPUtils.getBoolean(Constants.IS_LOGIN, false);
                 bindingView.tvPhone.setText("未登录，点击登录");
                 //loginOut.setVisibility(View.GONE);
                 //getActivity().finish();
@@ -166,7 +172,8 @@ public class UserFragment extends BaseFragment<FragmentUserBinding> {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK) {
             if (requestCode == 22) {
-                LoginResponse.User user = (LoginResponse.User) mAcache.getAsObject(Constants.USER);
+                user = (LoginResponse.User) mAcache.getAsObject(Constants.USER);
+                isLogin = SPUtils.getBoolean(Constants.IS_LOGIN, false);
                 bindingView.tvPhone.setText(user.getPhone() + "，" + "欢迎您");
                 loginOut.setVisibility(View.VISIBLE);
             }
