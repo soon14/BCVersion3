@@ -22,6 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="18sp"
+        android:id="@+id/headname"
         android:text="未登录，点击登录"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
