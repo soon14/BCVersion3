@@ -684,4 +684,51 @@ public class PubData {
         list.add(ycItem);
         return list;
     }
+
+    public static List<MultipleItem> getPageData2() {
+
+        List<MultipleItem> list = new ArrayList<>();
+        MultipleItem m1 = new MultipleItem(MultipleItem.MUKUAI2);
+        m1.setTitle("双色球");
+        m1.setPubTime("第17140期");
+        m1.setContent("21,22,25,28,29,30,08");
+        MultipleItem m2 = new MultipleItem(MultipleItem.MUKUAI2);
+        m2.setTitle("七乐彩");
+        m2.setPubTime("第17140期");
+        m2.setContent("01,13,20,23,25,26,28");
+        MultipleItem d1 = new MultipleItem(MultipleItem.MUKUAI2);
+        d1.setTitle("大乐透");
+        d1.setPubTime("第17140期");
+        d1.setContent("10,16,25,26,29,01,05");
+        MultipleItem q1 = new MultipleItem(MultipleItem.MUKUAI2);
+        q1.setTitle("七星彩");
+        q1.setPubTime("第17140期");
+        q1.setContent("0,6,9,1,1,0,7");
+        MultipleItem p1 = new MultipleItem(MultipleItem.MUKUAI2);
+        p1.setTitle("排列三");
+        p1.setPubTime("第17327期");
+        p1.setContent("1,4,5,1,1,0,7");
+        MultipleItem p15 = new MultipleItem(MultipleItem.MUKUAI2);
+        p15.setTitle("排列五");
+        p15.setPubTime("第17327期");
+        p15.setContent("1,4,5,4,3,0,7");
+        MultipleItem k1 = new MultipleItem(MultipleItem.MUKUAI2);
+        k1.setTitle("快三");
+        k1.setPubTime("第171201011期");
+        k1.setContent("1,2,3,1,1,0,7");
+        MultipleItem x1 = new MultipleItem(MultipleItem.MUKUAI2);
+        x1.setTitle("11选5");
+        x1.setPubTime("第17120108期");
+        x1.setContent("08,06,01,10,02,0,7");
+        list.add(m1);
+        list.add(m2);
+        list.add(d1);
+        list.add(q1);
+        list.add(p1);
+        list.add(p15);
+        list.add(k1);
+        list.add(x1);
+        return list;
+
+    }
 }

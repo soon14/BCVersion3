@@ -17,8 +17,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorTheme"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
+                android:gravity="center"
+                android:orientation="vertical">
 
 
                 <com.mrice.txl.appthree.view.CircleImageView
@@ -27,7 +27,7 @@
                     android:layout_height="80dp"
                     android:layout_margin="@dimen/common_size_13"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/buy_main_jclq" />
+                    android:src="@drawable/head2" />
 
 
                 <TextView
@@ -38,6 +38,7 @@
                     android:text="未登录，点击登录"
                     android:textColor="@color/white"
                     android:textSize="15sp"
+                    android:layout_marginBottom="10dp"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -55,12 +56,13 @@
                 android:drawableLeft="@drawable/favorite"
                 android:layout_marginLeft="15dp"
                 android:text="   收藏"
-                android:visibility="visible" />
+                android:visibility="gone" />
 
 
             <View
                 style="@style/line"
                 android:layout_marginLeft="10dp"
+                android:visibility="gone"
                 android:background="@android:color/darker_gray" />
 
 
@@ -128,6 +130,7 @@
                 <View
                     style="@style/horizontalLine"
                     android:layout_marginLeft="10dp"
+                    android:visibility="gone"
                     android:background="@android:color/darker_gray" />
 
 
@@ -135,6 +138,7 @@
                     android:id="@+id/introduction"
                     style="@style/menuItem"
                     android:clickable="true"
+                    android:visibility="gone"
                     android:layout_marginLeft="15dp"
                     android:drawableLeft="@drawable/link"
                     android:text="   关于" />

@@ -216,7 +216,7 @@ public class WelcomeActivity extends Activity {
         if (isIn) {
             return;
         }
-        Intent intent = new Intent(this, HomeActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
         isIn = true;

@@ -20,7 +20,7 @@ public class FOneAdapter extends BaseAdapter {
 
     private Context context;
     private List<PageOne> list;
-    private int[] arrs = new int[]{R.drawable.d, R.drawable.d2, R.drawable.d3, R.drawable.d4, R.drawable.d5, R.drawable.d6, R.drawable.d7, R.drawable.d8, R.drawable.d9, R.drawable.d10};
+    private int[] arrs = new int[]{R.drawable.d10, R.drawable.d9, R.drawable.d8, R.drawable.d7, R.drawable.d6, R.drawable.d5, R.drawable.d4, R.drawable.d3, R.drawable.d2, R.drawable.d};
     ViewHolder viewHolder;
 
     public FOneAdapter(Context context, List<PageOne> list) {

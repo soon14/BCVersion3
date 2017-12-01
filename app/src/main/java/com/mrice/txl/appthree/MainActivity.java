@@ -17,6 +17,7 @@ import com.mrice.txl.appthree.databinding.ActivityMainBinding;
 import com.mrice.txl.appthree.runtimepermissions.PermissionsManager;
 import com.mrice.txl.appthree.runtimepermissions.PermissionsResultAction;
 import com.mrice.txl.appthree.ui.UserFragment;
+import com.mrice.txl.appthree.ui.me.KJFragment2;
 import com.mrice.txl.appthree.ui.me.OneFragment;
 import com.mrice.txl.appthree.ui.me.TwoFragment;
 import com.mrice.txl.appthree.ui.service.AwardFragment;
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
     private Button[] mTabs;
     private UserFragment userFragment;
     private ServiceFragment serviceFragment;
-    private TwoFragment purchaseFragment;
+    private KJFragment2 purchaseFragment;
     private AwardFragment awardFragment;
     private OneFragment purchaseFragmentOne;
     private BeijingFragment beijingFragment;
@@ -90,7 +91,7 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
     private void initContentFragments() {
         userFragment = new UserFragment();
         serviceFragment = new ServiceFragment();
-        purchaseFragment = new TwoFragment();
+        purchaseFragment = new KJFragment2();
         purchaseFragmentOne = new OneFragment();
 //        awardFragment = new AwardFragment();
 //        beijingFragment = new BeijingFragment();

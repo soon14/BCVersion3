@@ -56,7 +56,6 @@ public class HomeActivity extends AppCompatActivity
     /**
      * 标题
      */
-    private TextView title;
     private Toolbar toolbar;
     private Button[] mTabs;
     private int index;
@@ -86,14 +85,7 @@ public class HomeActivity extends AppCompatActivity
         btnPurchase = mBinding.appbarhome.btnPurchase;
         btnUser = mBinding.appbarhome.btnUser;
         btnService = mBinding.appbarhome.btnService;
-        title = (TextView) findViewById(R.id.headname);
-        title.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
-                startActivityForResult(intent,22);
-            }
-        });
+
         mTabs = new Button[3];
         mTabs[0] = (Button) findViewById(R.id.btn_purchase);
         mTabs[1] = (Button) findViewById(R.id.btn_service);
@@ -145,7 +137,7 @@ public class HomeActivity extends AppCompatActivity
         LoginResponse.User user = (LoginResponse.User) mAcache.getAsObject(Constants.USER);
         isLogin = SPUtils.getBoolean(Constants.IS_LOGIN, false);
         if (isLogin && user != null) {
-            title.setText(user.getPhone() + "，" + "欢迎您");
+
         } else {
         }
     }
@@ -262,7 +254,6 @@ public class HomeActivity extends AppCompatActivity
                 Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
                 startActivityForResult(intent, 22);
                 mAcache.clear();
-                title.setText("未登录，点击登录");
                 dialogInterface.dismiss();
             }
         }, new DialogInterface.OnClickListener() {
