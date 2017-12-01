@@ -10,6 +10,7 @@ public class MultipleItem implements MultiItemEntity{
     public static final int XINWEN = 1;
     public static final int MUKUAI = 2;
     public static final int BANNER = 3;
+    public static final int MUKUAI2 = 4;
     private int itemType;
 
     public MultipleItem(int itemType) {

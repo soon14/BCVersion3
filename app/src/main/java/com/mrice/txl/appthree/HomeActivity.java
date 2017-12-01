@@ -27,6 +27,7 @@ import com.mrice.txl.appthree.ui.UserFragment;
 import com.mrice.txl.appthree.ui.home.HomeFragment;
 import com.mrice.txl.appthree.ui.me.KJFragment;
 import com.mrice.txl.appthree.ui.me.TwoFragment;
+import com.mrice.txl.appthree.ui.me.YCFragment;
 import com.mrice.txl.appthree.view.MyFragmentPagerAdapter;
 
 import java.util.ArrayList;
@@ -37,7 +38,7 @@ public class HomeActivity extends AppCompatActivity
     //底部fragment
     private Fragment[] fragments;
     private HomeFragment homeFragment;
-    private UserFragment userFragment;
+    private YCFragment ycFragment;
     private KJFragment kjFragment;
     // 一定需要对应的bean
     private ActivityHomeBinding mBinding;
@@ -109,8 +110,8 @@ public class HomeActivity extends AppCompatActivity
     private void initContentFragments() {
         homeFragment = new HomeFragment();
         kjFragment = new KJFragment();
-        userFragment = new UserFragment();
-        fragments = new Fragment[]{homeFragment, kjFragment, userFragment};
+        ycFragment = new YCFragment();
+        fragments = new Fragment[]{homeFragment, kjFragment, ycFragment};
         ArrayList<Fragment> mFragmentList = new ArrayList<>();
         for (Fragment fragment : fragments) {
             mFragmentList.add(fragment);
@@ -120,7 +121,7 @@ public class HomeActivity extends AppCompatActivity
         // 设置ViewPager最大缓存的页面个数(cpu消耗少)
         vpContent.setOffscreenPageLimit(3);
         vpContent.addOnPageChangeListener(this);
-        vpContent.setCurrentItem(0);
+        vpContent.setCurrentItem(0, false);
     }
 
     @Override
@@ -169,7 +170,7 @@ public class HomeActivity extends AppCompatActivity
                     btnPurchase.setSelected(true);
                     btnUser.setSelected(false);
                     btnService.setSelected(false);
-                    vpContent.setCurrentItem(0);
+                    vpContent.setCurrentItem(0, false);
                 }
                 break;
             case R.id.btn_service:
@@ -178,7 +179,7 @@ public class HomeActivity extends AppCompatActivity
                     btnPurchase.setSelected(false);
                     btnUser.setSelected(false);
                     btnService.setSelected(true);
-                    vpContent.setCurrentItem(1);
+                    vpContent.setCurrentItem(1, false);
                 }
                 break;
             case R.id.btn_user:
@@ -186,7 +187,7 @@ public class HomeActivity extends AppCompatActivity
                     btnPurchase.setSelected(false);
                     btnUser.setSelected(true);
                     btnService.setSelected(false);
-                    vpContent.setCurrentItem(2);
+                    vpContent.setCurrentItem(2, false);
                 }
                 index = 2;
                 break;

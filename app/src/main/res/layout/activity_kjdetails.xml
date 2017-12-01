@@ -69,7 +69,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:paddingLeft="30dp"
+            android:paddingLeft="25dp"
             android:paddingRight="20dp">
 
             <TextView
@@ -406,10 +406,10 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/layout_pl3"
+            android:id="@+id/layout_pl5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -421,7 +421,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="直选3" />
+                    android:text="直选" />
 
                 <TextView
                     android:id="@+id/line_m7"
@@ -445,6 +445,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="1px"
                 android:background="@color/gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_pl3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -456,7 +463,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="组选3" />
+                    android:text="组选" />
 
                 <TextView
                     android:id="@+id/line_m8"
@@ -517,5 +524,12 @@
                 android:background="@color/gray" />
         </LinearLayout>
 
+        <Button
+            android:id="@+id/checkHistory"
+            style="@style/style_commont_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="往期回顾" />
     </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>

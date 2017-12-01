@@ -66,6 +66,7 @@ public class OneFragment extends Fragment implements View.OnClickListener{
         paths.add("file:///android_asset/h2.html");
         paths.add("file:///android_asset/h3.html");
         Banner banner = (Banner) head.findViewById(R.id.banner);
+        head.findViewById(R.id.bar_b).setVisibility(View.GONE);
         //设置图片加载器
         banner.setImageLoader(new GlideImageLoader());
         //设置图片集合

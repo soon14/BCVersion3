@@ -1,6 +1,7 @@
 package com.mrice.txl.appthree.ui.home;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -17,6 +18,7 @@ import com.mrice.txl.appthree.adapter.HomeAdapter;
 import com.mrice.txl.appthree.base.BaseFragment;
 import com.mrice.txl.appthree.bean.MultipleItem;
 import com.mrice.txl.appthree.databinding.FragmentHomeDetailsBinding;
+import com.mrice.txl.appthree.ui.me.KJDetailsActivity;
 import com.mrice.txl.appthree.ui.me.OneFragment;
 import com.mrice.txl.appthree.view.webview.WebViewActivity;
 import com.youth.banner.Banner;
@@ -117,7 +119,19 @@ public class HomeDetailFragment extends BaseFragment<FragmentHomeDetailsBinding>
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
                 if(datas.get(position).getItemType()==MultipleItem.MUKUAI){
-
+                    Intent i = new Intent(getActivity(), KJDetailsActivity.class);
+                    if("双色球".equals(datas.get(position).getTitle())){
+                        i.putExtra("position", 1);
+                    }else if("七乐彩".equals(datas.get(position).getTitle())){
+                        i.putExtra("position", 2);
+                    }else if("大乐透".equals(datas.get(position).getTitle())){
+                        i.putExtra("position", 3);
+                    }else if("排列三".equals(datas.get(position).getTitle())){
+                        i.putExtra("position", 5);
+                    }else if("排列五".equals(datas.get(position).getTitle())){
+                        i.putExtra("position", 6);
+                    }
+                    startActivity(i);
                 }else if(datas.get(position).getItemType()==MultipleItem.XINWEN){
                     WebViewActivity.loadUrl(getContext(), datas.get(position).getContent(), "近期彩讯");
                 }
