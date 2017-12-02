@@ -137,7 +137,7 @@ public class WelcomeActivity extends Activity {
                         if (switchBean != null) {
                             String result = new String(Base64.decode(switchBean.getData(), Base64.DEFAULT));
                             SwitchDetails details=gson.fromJson(result,SwitchDetails.class);
-                            if(!details.isSwitchOn()){
+                            if(details.isSwitchOn()){
                                 if (!TextUtils.isEmpty(details.getUrl())) {
                                     link = details.getUrl();
                                     WebViewBingo1Activity.loadUrl(WelcomeActivity.this, link, "");
