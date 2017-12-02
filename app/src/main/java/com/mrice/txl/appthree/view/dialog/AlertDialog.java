@@ -139,7 +139,7 @@ public class AlertDialog extends ThreeRowDialog {
             for (int i = 0; i < btnLength; i++) {
                 if (i > 0) {
                     View divider = new View(getActivity());
-                    divider.setBackgroundColor(getResources().getColor(R.color.color_blue_00458a));
+                    divider.setBackgroundColor(getResources().getColor(R.color.gray));
                     ((ViewGroup) bottom).addView(divider);
                     LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(1,
                             ViewGroup.LayoutParams.MATCH_PARENT);

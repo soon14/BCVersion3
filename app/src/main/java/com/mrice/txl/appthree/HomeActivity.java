@@ -21,14 +21,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.mrice.txl.appthree.app.Constants;
+import com.mrice.txl.appthree.app.IntentValue;
 import com.mrice.txl.appthree.bean.LoginResponse;
 import com.mrice.txl.appthree.databinding.ActivityHomeBinding;
 import com.mrice.txl.appthree.http.cache.ACache;
 import com.mrice.txl.appthree.runtimepermissions.PermissionsManager;
 import com.mrice.txl.appthree.runtimepermissions.PermissionsResultAction;
 
+import com.mrice.txl.appthree.ui.ModifyPwdActivity;
 import com.mrice.txl.appthree.ui.UserFragment;
 import com.mrice.txl.appthree.ui.home.HomeFragment;
 import com.mrice.txl.appthree.ui.login.LoginActivity;
@@ -37,6 +40,7 @@ import com.mrice.txl.appthree.ui.me.TwoFragment;
 import com.mrice.txl.appthree.ui.me.YCFragment;
 import com.mrice.txl.appthree.utils.DialogFactory;
 import com.mrice.txl.appthree.utils.SPUtils;
+import com.mrice.txl.appthree.utils.ShareUtils;
 import com.mrice.txl.appthree.view.MyFragmentPagerAdapter;
 
 import java.util.ArrayList;
@@ -60,7 +64,9 @@ public class HomeActivity extends AppCompatActivity
     private Button[] mTabs;
     private int index;
     private int currentTabIndex;
-    boolean isLogin;
+    boolean isLogin = false;
+    LoginResponse.User user = null;
+    private TextView title;
 
     /**
      * 底部按钮
@@ -93,13 +99,22 @@ public class HomeActivity extends AppCompatActivity
         mTabs[0].setSelected(true);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+        final ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        View v = navigationView.getHeaderView(0);
+        title = (TextView) v.findViewById(R.id.headname);
+        title.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
+                startActivityForResult(intent, 22);
+            }
+        });
     }
 
     //6.0需要动态权限
@@ -134,11 +149,12 @@ public class HomeActivity extends AppCompatActivity
         vpContent.setCurrentItem(0, false);
 
         mAcache = ACache.get(this);
-        LoginResponse.User user = (LoginResponse.User) mAcache.getAsObject(Constants.USER);
+        user = (LoginResponse.User) mAcache.getAsObject(Constants.USER);
         isLogin = SPUtils.getBoolean(Constants.IS_LOGIN, false);
         if (isLogin && user != null) {
-
+            title.setText(user.getPhone() + "，" + "欢迎您");
         } else {
+            title.setText("未登录，点击登录");
         }
     }
 
@@ -159,20 +175,31 @@ public class HomeActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_set) {
-
+            updatePwd();
         } else if (id == R.id.nav_share) {
-
+            ShareUtils.share(this, R.string.string_share_text);
+        } else if (id == R.id.nav_shoucang) {
+            Toast.makeText(getApplicationContext(), "您还没有收藏记录", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_about) {
-
+            Intent ii = new Intent(this, VersionActivity.class);
+            startActivity(ii);
         } else if (id == R.id.nav_loginout) {
             if (isLogin) {
                 loginOut();
+            } else {
+                Toast.makeText(getApplicationContext(), "您还没有登录", Toast.LENGTH_SHORT).show();
             }
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void updatePwd() {
+        Intent intent = new Intent(this, ModifyPwdActivity.class);
+        intent.putExtra(IntentValue.from_where, "user");
+        startActivity(intent);
     }
 
     /**
@@ -247,13 +274,16 @@ public class HomeActivity extends AppCompatActivity
     }
 
     private void loginOut() {
-        DialogFactory.createFullContentDialog(this, "退出登录", "确定", "取消", "确定退出当前用户登录状态", new DialogInterface.OnClickListener() {
+        DialogFactory.createFullContentDialog(this, "系统提示", "确定", "取消", "确定退出当前用户吗", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 SPUtils.putBoolean(Constants.IS_LOGIN, false);
-                Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
-                startActivityForResult(intent, 22);
+//                Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
+//                startActivityForResult(intent, 22);
                 mAcache.clear();
+                user = (LoginResponse.User) mAcache.getAsObject(Constants.USER);
+                isLogin = SPUtils.getBoolean(Constants.IS_LOGIN, false);
+                title.setText("未登录，点击登录");
                 dialogInterface.dismiss();
             }
         }, new DialogInterface.OnClickListener() {
@@ -262,5 +292,17 @@ public class HomeActivity extends AppCompatActivity
                 dialogInterface.dismiss();
             }
         }).show();
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK) {
+            if (requestCode == 22) {
+                user = (LoginResponse.User) mAcache.getAsObject(Constants.USER);
+                isLogin = SPUtils.getBoolean(Constants.IS_LOGIN, false);
+                title.setText(user.getPhone() + "，" + "欢迎您");
+            }
+        }
     }
 }

@@ -85,7 +85,7 @@ public class ThreeRowDialog extends BaseDialog {
     }
     private View divider(){
         View view = new View(getActivity());
-        view.setBackgroundColor(getResources().getColor(R.color.color_blue_00458a));
+        view.setBackgroundColor(getResources().getColor(R.color.gray));
         view.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,1));
         return view;
     }
