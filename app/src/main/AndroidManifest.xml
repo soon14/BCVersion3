@@ -115,6 +115,10 @@
         <activity
             android:name=".ui.zoushi.LottoTrendActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.me.YJFKActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
     </application>
 
 </manifest>

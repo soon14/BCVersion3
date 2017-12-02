@@ -17,6 +17,7 @@ import com.mrice.txl.appthree.app.Constants;
 import com.mrice.txl.appthree.app.IntentValue;
 import com.mrice.txl.appthree.base.BaseFragment;
 import com.mrice.txl.appthree.bean.LoginResponse;
+import com.mrice.txl.appthree.databinding.FragmentUser2Binding;
 import com.mrice.txl.appthree.databinding.FragmentUserBinding;
 import com.mrice.txl.appthree.http.cache.ACache;
 import com.mrice.txl.appthree.ui.login.LoginActivity;
@@ -30,12 +31,12 @@ import com.mrice.txl.appthree.view.webview.WebViewActivity;
 import static android.app.Activity.RESULT_OK;
 
 /**
- * Created by cai on 2017/8/2.
+ * Created by Mr on 2017/12/2.
  */
 
-public class UserFragment extends BaseFragment<FragmentUserBinding> {
+public class UserFragment2 extends BaseFragment<FragmentUser2Binding> {
 
-    private TextView share, loginOut, updatePassword, introduction, problem;
+    private TextView loginOut;
     private ImageView iv_avator;
     private ACache mAcache;
     float arr[] = {0.2f, 1.2f, 0.6f, 0.3f, 0.5f, 0.8f};//定义一个数组
@@ -71,22 +72,17 @@ public class UserFragment extends BaseFragment<FragmentUserBinding> {
     }
 
     private void initView() {
-        share = bindingView.share;
-        problem = bindingView.problem;
-        introduction = bindingView.introduction;
         loginOut = bindingView.loginOut;
-        updatePassword = bindingView.updatePassword;
         iv_avator = bindingView.ivAvatar;
         initListener();
     }
 
     private void initListener() {
-        share.setOnClickListener(this);
-        problem.setOnClickListener(this);
-        introduction.setOnClickListener(this);
+        bindingView.share.setOnClickListener(this);
+        bindingView.problem.setOnClickListener(this);
         loginOut.setOnClickListener(this);
         iv_avator.setOnClickListener(this);
-        updatePassword.setOnClickListener(this);
+        bindingView.updatePassword.setOnClickListener(this);
         bindingView.shoucang.setOnClickListener(this);
         bindingView.tvPhone.setOnClickListener(this);
         bindingView.banben.setOnClickListener(this);
@@ -188,6 +184,6 @@ public class UserFragment extends BaseFragment<FragmentUserBinding> {
 
     @Override
     public int setContent() {
-        return R.layout.fragment_user;
+        return R.layout.fragment_user2;
     }
 }

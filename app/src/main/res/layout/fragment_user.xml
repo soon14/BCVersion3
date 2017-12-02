@@ -116,7 +116,18 @@
                     style="@style/horizontalLine"
                     android:layout_marginLeft="10dp"
                     android:background="@android:color/darker_gray" />
+                <TextView
+                    android:id="@+id/yjfk"
+                    style="@style/menuItem"
+                    android:clickable="true"
+                    android:drawableLeft="@drawable/comments1"
+                    android:layout_marginLeft="15dp"
+                    android:text="   意见反馈" />
 
+                <View
+                    style="@style/horizontalLine"
+                    android:layout_marginLeft="10dp"
+                    android:background="@android:color/darker_gray" />
                 <TextView
                     android:id="@+id/banben"
                     style="@style/menuItem"

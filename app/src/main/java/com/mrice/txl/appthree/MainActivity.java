@@ -17,6 +17,7 @@ import com.mrice.txl.appthree.databinding.ActivityMainBinding;
 import com.mrice.txl.appthree.runtimepermissions.PermissionsManager;
 import com.mrice.txl.appthree.runtimepermissions.PermissionsResultAction;
 import com.mrice.txl.appthree.ui.UserFragment;
+import com.mrice.txl.appthree.ui.UserFragment2;
 import com.mrice.txl.appthree.ui.me.KJFragment2;
 import com.mrice.txl.appthree.ui.me.OneFragment;
 import com.mrice.txl.appthree.ui.me.TwoFragment;
@@ -35,7 +36,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener {
     private long lastClickTime = 0;
     private Button[] mTabs;
-    private UserFragment userFragment;
+    private UserFragment2 userFragment;
     private ServiceFragment serviceFragment;
     private KJFragment2 purchaseFragment;
     private AwardFragment awardFragment;
@@ -89,7 +90,7 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
     }
 
     private void initContentFragments() {
-        userFragment = new UserFragment();
+        userFragment = new UserFragment2();
         serviceFragment = new ServiceFragment();
         purchaseFragment = new KJFragment2();
         purchaseFragmentOne = new OneFragment();
