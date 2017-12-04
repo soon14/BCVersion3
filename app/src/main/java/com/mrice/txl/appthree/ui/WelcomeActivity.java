@@ -39,7 +39,7 @@ public class WelcomeActivity extends Activity {
     private CompositeSubscription mCompositeSubscription;
     private ActivityTransitionBinding mBinding;
     private boolean animationEnd;
-    private int[] mDrawables = new int[]{R.drawable.welcome2};
+    private int[] mDrawables = new int[]{R.drawable.welcome};
     //    private int[] mDrawables = new int[]{R.drawable.b_1, R.drawable.b_2,
 //            R.drawable.b_3, R.drawable.b_4, R.drawable.b_5, R.drawable.b_6,
 //    };

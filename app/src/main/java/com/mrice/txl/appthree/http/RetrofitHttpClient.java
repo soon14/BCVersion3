@@ -136,7 +136,7 @@ public interface RetrofitHttpClient {
     @POST("appgl/cp/getApp?appId=2017112700002")
     Observable<NewAoMenBean> switchOnOff();
 
-    @GET("get_init_data.php?type=android&appid=cp20171124005")
+    @GET("get_init_data.php?type=android&appid=cp20171124003")
     Observable<SwitchBean> switchCheck();
 
     @POST("league")
